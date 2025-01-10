@@ -5,12 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="contact">Contact</a>
-        <a href="projects">Projects</a>
+        <a href="../index.html">Home</a>
+        <a href="../contact/index.html">Contact</a>
+        <a href="../projects/index.html">Projects</a>
+        <a href="../profile/index.html">Profile</a>
     </nav>
 </head>
 <body>
     <h1>Contact</h1>
+    <form action="mailto:jal134@ucsd.edu" method="POST" enctype="text/plain">
+        <label>Email:</label>
+        <input name="email" type="email">
+        <label>Subject:</label>
+        <input name="subject">
+        <label>Body:</label>
+        <textarea name="body"></textarea>
+        <button>Submit</button>
+    </form>
+
 </body>
 </html>
