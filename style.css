@@ -20,6 +20,12 @@ body {
     form {
       display: grid;
       grid-template-columns: auto 1fr;
+      gap: 1em;
+    }
+
+    input {
+      display: grid;
+      grid-template-columns: subgrid;
     }
 
     label {
@@ -34,10 +40,20 @@ body {
       grid-template-columns: subgrid;
       grid-column: 1 / -1;
       gap: 1em;
+      display: flex;
+      justify-content: center;
     }
 
     h1 {
       font-size: 4em;
+    }
+
+    h1.resume {
+      font-size: 2em;
+    }
+
+    p.resumeinfo {
+      font-size: 1.2em;
     }
   }
 
@@ -54,7 +70,7 @@ nav {
     }
   }
 
-  li a:not(.current){
+  li a{
     flex: 1;
     text-decoration: none;
     color: inherit;
