@@ -15,7 +15,7 @@ let pages = [
 let nav = document.createElement('nav');
 document.body.prepend(nav);
 const ARE_WE_HOME = document.documentElement.classList.contains('Home');
-
+console.log(document.documentElement.classList)
 
 for (let p of pages) {
   let url = p.url;
@@ -26,6 +26,7 @@ for (let p of pages) {
   }
 
   let a = document.createElement('a');
+  
   a.href = url;
   a.textContent = title;
   nav.append(a);
@@ -38,6 +39,7 @@ for (let p of pages) {
     'current',
     a.host === location.host && a.pathname === location.pathname
   );
+
 }
 
 document.body.insertAdjacentHTML(
