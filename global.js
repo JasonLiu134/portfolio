@@ -15,12 +15,12 @@ let pages = [
 let nav = document.createElement('nav');
 document.body.prepend(nav);
 const ARE_WE_HOME = document.documentElement.classList.contains('Home');
-console.log(ARE_WE_HOME);
-console.log(document.documentElement.classList.contains('Home'));
 
 for (let p of pages) {
   let url = p.url;
   let title = p.title;
+
+  url = '../' + url;
 
   if (!ARE_WE_HOME && !url.startsWith('http')) {
     url = '../' + url;
