@@ -5,16 +5,16 @@ function $$(selector, context = document) {
 }
 
 let pages = [
-  { url: '../', title: 'Home' },
-  { url: '../contact/', title: 'Contact' },
-  { url: '../projects/', title: 'Projects' },
+  { url: '', title: 'Home' },
+  { url: 'contact/', title: 'Contact' },
+  { url: 'projects/', title: 'Projects' },
   { url: 'https://github.com/JasonLiu134', title: 'GitHub' },
-  { url: '../resume/', title: 'Resume' },
+  { url: 'resume/', title: 'Resume' },
 ];
 
 let nav = document.createElement('nav');
 document.body.prepend(nav);
-const ARE_WE_HOME = document.documentElement.classList.contains('home');
+const ARE_WE_HOME = document.documentElement.classList.contains('Home');
 
 for (let p of pages) {
   let url = p.url;
