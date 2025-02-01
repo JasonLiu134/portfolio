@@ -1,62 +1,74 @@
 [
 	{
-		"title": "Lorem ipsum dolor sit.",
+		"title": "Exploratory Visulization For DSC106",
+		"year": "2025",
 		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolor quos, quod assumenda explicabo odio, nobis ipsa laudantium quas eum veritatis ullam sint porro minima modi molestias doloribus cumque odit."
+		"description": "Design and create an exploratory visualization based on data gathered on weather patterns in various cities in America. Created for DSC 106, attempted to effectively communicate a clear idea and story behind the data provided to us. Also provided clear rationale for every design choice made in the project."
 	},
 	{
-		"title": "Architecto minima sed omnis?",
+		"title": "Recipes and Ratings For DSC80",
+		"year": "2024",
 		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "Est, reiciendis aspernatur debitis maxime et itaque animi sit quod quo, tempore incidunt tempora dignissimos exercitationem enim numquam quam quaerat optio laborum ut unde hic delectus laboriosam? Quasi, cupiditate corporis."
+		"description": "Comprehensive project for DSC80 that includes missingness analysis, creating a predictive model, hypothesis testing, and more. This project utilized all of the skills I learned in DSC80 and the result is a story that dives into how I can try and predict cooking time based on calories and other nutritional information."
+	},
+	{
+		"title": "Another Placeholder Project",
+		"year": "2023",
+		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
+		"description": "Don't have anything really to place here, this is just a placeholder project that doesn't use the Lorem Ipsum generated text."
 	},
 	{
 		"title": "Asperiores rem repellendus doloremque.",
+		"year": "2022",
 		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
 		"description": "Eligendi tenetur quae quos recusandae est. Cumque, voluptatem. Quo nihil dignissimos molestiae explicabo praesentium aspernatur debitis, illo rerum possimus quam ducimus earum nulla officiis maiores itaque repellat corporis soluta labore?"
 	},
 	{
 		"title": "Laudantium reprehenderit placeat perspiciatis.",
+		"year": "2021",
 		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
 		"description": "Quo minus perferendis nulla corrupti repellat dolorem dolore assumenda sit minima ducimus quidem ullam, id ipsa dicta tempora laborum officiis unde possimus cumque nobis alias inventore! Ullam repudiandae iusto nam."
 	},
 	{
 		"title": "Consequuntur autem eos facere.",
+		"year": "2020",
 		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
 		"description": "Laborum alias ea unde harum aspernatur? Molestiae, veritatis, possimus, numquam ex excepturi quod ducimus sit odit optio quibusdam sequi aliquid itaque tempore perspiciatis placeat expedita vero voluptates. Sit, aspernatur sint!"
 	},
 	{
 		"title": "Quos sint quaerat omnis?",
+		"year": "2019",
 		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
 		"description": "Est neque, velit nam rerum error odio voluptates voluptatem magnam laboriosam ad? Doloribus, id et itaque unde porro totam ullam quaerat blanditiis odit animi eveniet aut, voluptate velit iure odio."
 	},
 	{
 		"title": "Iste ipsam magni fuga!",
+		"year": "2018",
 		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
 		"description": "Velit omnis suscipit nemo quia? Iste maiores numquam labore quia nemo eveniet odit, modi magnam? Architecto officia sint est. Architecto iste minima consequuntur explicabo illo error sed at dolore nostrum!"
 	},
 	{
 		"title": "Ipsum, aperiam magni? Nobis.",
+		"year": "2017",
 		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
 		"description": "Delectus magni, vel, quod mollitia hic rem temporibus, sint doloribus tenetur qui dolores tempore quisquam fuga nobis recusandae molestiae ipsum nostrum maxime eaque dicta aperiam eum quas beatae. At, neque."
 	},
 	{
 		"title": "Dicta nihil odit illo?",
+		"year": "2016",
 		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
 		"description": "Vitae quos laudantium officiis rerum, accusamus delectus aspernatur quas nulla, magni sed, excepturi saepe incidunt laboriosam alias at aliquam atque quisquam autem nesciunt. Minus, reprehenderit odit nam illo natus aspernatur?"
 	},
 	{
 		"title": "Vel earum nulla facilis.",
+		"year": "2015",
 		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
 		"description": "Aut voluptatem sint atque corrupti accusamus necessitatibus possimus et, itaque nulla id deleniti nemo repellendus asperiores molestias laudantium, mollitia ad dicta. Laboriosam, itaque. Quos corporis, perferendis natus officiis beatae qui."
 	},
 	{
 		"title": "Nobis iste neque quaerat.",
+		"year": "2014",
 		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
 		"description": "Quos, recusandae, sit rerum velit nostrum nihil quisquam tempora repellat sed quibusdam facilis. Assumenda quaerat ab, nesciunt odio facere sit, ipsa necessitatibus tempora, maiores commodi sed quae provident deserunt at?"
-	},
-	{
-		"title": "Iusto, incidunt. Totam, illum.",
-		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "Tempore, eveniet minus velit, earum aperiam necessitatibus repellendus provident accusamus illum officiis doloribus, eum saepe est aut numquam distinctio pariatur natus totam repellat. Numquam nulla libero sapiente magnam nostrum ex."
 	}
 ]

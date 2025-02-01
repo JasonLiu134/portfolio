@@ -88,13 +88,23 @@ export async function fetchJSON(url) {
 
 export function renderProjects(project, containerElement, headingLevel = 'h2') {
   containerElement.innerHTML = '';
-  const article = document.createElement('article');
+  for (let proj of project){
+    const article = document.createElement('article');
+    article.innerHTML = `
+      <${headingLevel}>${proj.title} (${proj.year})</${headingLevel}>
+      <img src="${proj.image}" alt="${proj.title}">
+      <p>${proj.description}</p>
+    `;
+    containerElement.appendChild(article);
+  }
+}
 
-  article.innerHTML = `
-    <h3>${project.title}</h3>
-    <img src="${project.image}" alt="${project.title}">
-    <p>${project.description}</p>
-  `;
+export function countProjects(project) {
+  const title = document.querySelector('.projects-title');
+  title.innerHTML = `${project.length} Projects`;
+}
 
-  containerElement.appendChild(article);
+export async function fetchGitHubData(username) {
+  // return statement here
+  return fetchJSON(`https://api.github.com/users/${username}`);
 }
