@@ -123,3 +123,54 @@ dl {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 1em;
 }
+
+#projects-pie-plot {
+  max-width: 20em;
+  margin-block: 2em;
+
+  overflow: visible;
+}
+
+.swatch {
+  width: 4mm;
+  height: 4mm;
+  background-color: var(--color);
+  border-radius: 3px;
+}
+
+.legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  border: 1px solid;
+  padding: 2em;
+  margin: 3em;
+  flex: 1;
+}
+
+.legend_class {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.legend_container {
+  display: flex;
+}
+
+svg:has(path:hover) {
+  path:not(:hover) {
+    opacity: 0.5;
+  }
+  path {
+    transition: 300ms;
+    cursor: pointer;
+  }
+}
+
+.selected {
+  --color: oklch(60% 45% 0) !important;
+
+  &:is(path) {
+    fill: var(--color);
+  }
+}

@@ -54,7 +54,7 @@ document.body.insertAdjacentHTML(
 	</label>`
 );
 
-let select = document.querySelector(":root")
+let select = document.querySelector('select')
 
 if ("colorScheme" in localStorage) {
   document.documentElement.style.setProperty('color-scheme', localStorage.colorScheme);
@@ -91,9 +91,11 @@ export function renderProjects(project, containerElement, headingLevel = 'h2') {
   for (let proj of project){
     const article = document.createElement('article');
     article.innerHTML = `
-      <${headingLevel}>${proj.title} (${proj.year})</${headingLevel}>
+      <${headingLevel}>${proj.title}</${headingLevel}>
       <img src="${proj.image}" alt="${proj.title}">
-      <p>${proj.description}</p>
+      <div>
+      <p>${proj.description}</p> <p style="font-family: Baskerville, serif; font-variant-numeric: oldstyle-nums;">c. ${proj.year}</p>
+      </div>
     `;
     containerElement.appendChild(article);
   }
