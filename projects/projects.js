@@ -34,15 +34,15 @@ function renderPieChart(projectsGiven) {
         d3.select('svg')
         .append('path')
         .attr('d', arc)
-        .attr('fill', colors(idx)) // Fill in the attribute for fill color via indexing the colors variable
+        .attr('fill', colors(idx))
     })
 
     let legend = d3.select('.legend');
     newData.forEach((d, idx) => {
         legend.append('li')
-            .attr('style', `--color:${colors(idx)}`) // set the style attribute while passing in parameters
+            .attr('style', `--color:${colors(idx)}`)
             .attr('class', 'legend_class')
-            .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`); // set the inner html of <li>
+            .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`);
     })
 
     let selectedIndex = -1;
@@ -82,15 +82,13 @@ renderPieChart(projects);
 let query = '';
 let searchInput = document.querySelector('.searchBar');
 searchInput.addEventListener('input', (event) => {
-  // update query value
   query = event.target.value;
-  // filter projects
+
   let filteredProjects = projects.filter((project) => {
     let values = Object.values(project).join('\n').toLowerCase();
     return values.includes(query.toLowerCase());
   });
 
-  // render filtered projects
   renderProjects(filteredProjects, projectsContainer, 'h2');
   renderPieChart(filteredProjects);
 });
