@@ -60,14 +60,17 @@ function renderPieChart(projectsGiven) {
             return idx === selectedIndex ? 'selected' : '';
         });
 
-        legend.selectAll('li').attr('class', (_, idx) => {
-            return idx === selectedIndex ? 'selected' : '' + 'legend_class';
-        })
+        legend
+          .selectAll('li')
+          .attr('class', (_, idx) => {
+            return idx === selectedIndex ? 'legend_class selected' : 'legend_class';
+          });
 
         if (selectedIndex === -1) {
-            renderProjects(projects, projectsContainer, 'h2');
+            renderProjects(projectsGiven, projectsContainer, 'h2');
           } else {
-            let filteredProjects = projects.filter(project => project.year === newData[selectedIndex].label);
+            let filteredProjects = projectsGiven.filter(
+              project => project.year === newData[selectedIndex].label);
             renderProjects(filteredProjects, projectsContainer, 'h2');
           }
       });
@@ -86,6 +89,7 @@ searchInput.addEventListener('input', (event) => {
     let values = Object.values(project).join('\n').toLowerCase();
     return values.includes(query.toLowerCase());
   });
+
   // render filtered projects
   renderProjects(filteredProjects, projectsContainer, 'h2');
   renderPieChart(filteredProjects);

@@ -138,6 +138,11 @@ dl {
   border-radius: 3px;
 }
 
+.swatch.selected {
+  background-color: #333; /* Change this to the color you want when selected */
+  border: 2px solid #000; /* Optional: add border for visual clarity */
+}
+
 .legend {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
@@ -173,4 +178,12 @@ svg:has(path:hover) {
   &:is(path) {
     fill: var(--color);
   }
+}
+
+.searchBar {
+  width: 100%;
+  max-width: 60em; 
+  margin: 1em;
+  padding-right: 1em;
+  box-sizing: border-box;
 }
