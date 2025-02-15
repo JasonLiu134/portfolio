@@ -66,9 +66,12 @@ function displayStats() {
     dl.append('dd').text(commits.length);
     dl.append('dd').text(data.length);
     dl.append('dd').text(d3.groups(data, d => d.file).length);
-    dl.append('dd').text(d3.max(commits, (commit) => commit.totalLines));
-    dl.append('dd').text(d3.mean(commits, (commit) => commit.totalLines).toFixed(2));
-    dl.append('dd').text(d3.mean(data, d => d.length).toFixed(2));
+
+    const fileLengths = d3.rollups(data, (v) => d3.max(v, (v) => v.line), (d) => d.file);
+    const lineLengths = d3.rollups(data, (v) => d3.max(v, (v) => v.length), (d) => d.file);
+    dl.append('dd').text(d3.max(fileLengths, (d) => d[1]));
+    dl.append('dd').text(d3.mean(fileLengths, (d) => d[1]));
+    dl.append('dd').text(d3.mean(lineLengths, (d) => d[1]));
 }
 
 let xScale;
@@ -250,4 +253,48 @@ function updateLanguageBreakdown() {
     }
   
     return breakdown;
-}  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
