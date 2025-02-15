@@ -30,7 +30,7 @@ commits = d3
         let { author, date, time, timezone, datetime } = first;
         let ret = {
             id: commit,
-            url: 'https://github.com/YOUR_REPO/commit/' + commit,
+            url: 'https://github.com/jasonliu134/portfolio/commit/' + commit,
             author,
             date,
             time,
