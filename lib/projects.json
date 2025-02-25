@@ -1,5 +1,12 @@
 [
 	{
+		"title": "Bikewatching Project",
+		"year": "2025",
+		"image": "../images/bikewatching.png",
+		"url": "https://jasonliu134.github.io/bikewatching/",
+		"description": "Bikewatching Project completed for Lab 7 in DSC 106. Consists of a page that can visualize bike traffic in the Boston Area, featuring bike lanes from both cambridge and boston plotted over the overall map of the Boston Area. Also comes with a plot of the different stations present in the area, with an interactive filter to show the data over time and scaled according to departures/arrivals."
+	},
+	{
 		"title": "Exploratory Visulization For DSC106",
 		"year": "2025",
 		"image": "https://vis-society.github.io/labs/2/images/empty.svg",

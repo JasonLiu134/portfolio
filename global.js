@@ -91,14 +91,25 @@ export function renderProjects(project, containerElement, headingLevel = 'h2') {
   containerElement.innerHTML = '';
   for (let proj of project){
     const article = document.createElement('article');
-    article.innerHTML = `
+    if (!proj.url) {
+      article.innerHTML = `
       <${headingLevel}>${proj.title}</${headingLevel}>
-      <img src="${proj.image}" alt="${proj.title}">
+      <img src="${proj.image}" alt="${proj.title}" width="225" height="150">
       <div>
       <p>${proj.description}</p> <p style="font-family: Baskerville, serif; font-variant-numeric: oldstyle-nums;">c. ${proj.year}</p>
       </div>
     `;
+    } else {
+      article.innerHTML = `
+        <${headingLevel}><a href="${proj.url}" target="_blank">${proj.title}</a></${headingLevel}>
+        <img src="${proj.image}" alt="${proj.title}" width="225" height="150">
+        <div>
+        <p>${proj.description}</p> <p style="font-family: Baskerville, serif; font-variant-numeric: oldstyle-nums;">c. ${proj.year}</p>
+        </div>
+      `;
+    }
     containerElement.appendChild(article);
+
   }
 }
 
