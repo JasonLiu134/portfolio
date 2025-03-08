@@ -318,10 +318,10 @@ function fileDetails(endIndex) {
         .style('background', fileTypeColors);
 }
 
-let NUM_ITEMS = 27; // Ideally, let this value be the length of your commit history
+let NUM_ITEMS = 30; // Ideally, let this value be the length of your commit history
 let ITEM_HEIGHT = 140; // Feel free to change
 let VISIBLE_COUNT = 10; // Feel free to change as well
-let totalHeight = (NUM_ITEMS + 3) * ITEM_HEIGHT;
+let totalHeight = (NUM_ITEMS + 1.5) * ITEM_HEIGHT;
 const scrollContainer = d3.select('#scroll-container');
 const spacer = d3.select('#spacer');
 spacer.style('height', `${totalHeight}px`);
@@ -412,7 +412,7 @@ function displayCommitFiles(index) {
 }
 
 let ITEM_HEIGHT_DOTS = 100; // Feel free to change
-let totalHeightDots = (NUM_ITEMS + 4) * ITEM_HEIGHT_DOTS;
+let totalHeightDots = (NUM_ITEMS + 2.5) * ITEM_HEIGHT_DOTS;
 const scrollContainerDots = d3.select('#scroll-container-dots');
 const spacerDots = d3.select('#spacer-dots');
 spacerDots.style('height', `${totalHeightDots}px`);
