@@ -416,7 +416,7 @@ function displayCommitFiles(index) {
                   .style('top', (_, idx) => `${idx * ITEM_HEIGHT_DOTS}px`)
 }
 
-let ITEM_HEIGHT_DOTS = 100; // Feel free to change
+let ITEM_HEIGHT_DOTS = 100; 
 let totalHeightDots = (NUM_ITEMS + 2.5) * ITEM_HEIGHT_DOTS;
 const scrollContainerDots = d3.select('#scroll-container-dots');
 const spacerDots = d3.select('#spacer-dots');
