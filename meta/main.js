@@ -318,7 +318,7 @@ function fileDetails(endIndex) {
         .style('background', fileTypeColors);
 }
 
-let NUM_ITEMS = 32; // Ideally, let this value be the length of your commit history
+let NUM_ITEMS = 33; // Ideally, let this value be the length of your commit history
 let ITEM_HEIGHT = 140; // Feel free to change
 let VISIBLE_COUNT = 10; // Feel free to change as well
 let totalHeight = (NUM_ITEMS + 1.5) * ITEM_HEIGHT;
