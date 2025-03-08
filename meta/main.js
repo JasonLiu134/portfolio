@@ -318,7 +318,7 @@ function fileDetails(endIndex) {
         .style('background', fileTypeColors);
 }
 
-let NUM_ITEMS = 30; // Ideally, let this value be the length of your commit history
+let NUM_ITEMS = 31; // Ideally, let this value be the length of your commit history
 let ITEM_HEIGHT = 140; // Feel free to change
 let VISIBLE_COUNT = 10; // Feel free to change as well
 let totalHeight = (NUM_ITEMS + 1.5) * ITEM_HEIGHT;
@@ -391,19 +391,24 @@ function displayCommitFiles(index) {
     // Clear things off
     dotsContainer.selectAll('div').remove();
 
+    let totalFilteredData = []
+    let totalFileNum = 0;
+
     // Re-bind the commit data to the container and represent each using a div
     dotsContainer.selectAll('div')
                   .data(commits)
                   .enter()
                   .append('div')
                   .each(function (commit, idx) {
-                    // const filteredData = data.filter(d => d.commit === commit.id);
+                    const filteredData = data.filter(d => d.commit === commit.id);
+                    totalFilteredData.push(...filteredData);
+                    const numFiles = (new Set(totalFilteredData.map(item => item.file))).size;
                     d3.select(this).html(`
                         <p>
                             On ${new Date(commit.datetime).toLocaleString("en", {dateStyle: "full", timeStyle: "short"})}, I made
                             <a href="${commit.url}" target="_blank">
                                 ${idx > 0 ? 'another commit to my portfolio' : 'my first commit, creating my first file in the portfolio'}
-                            </a>. There are currently ${d3.rollups(commit.lines, D => D.length, d => d.file).length} files, and ${commit.totalLines} total lines. 
+                            </a>. There are currently ${numFiles} files, and ${totalFilteredData.length} total lines. 
                         </p>
                     `);
                 })
@@ -421,5 +426,4 @@ scrollContainerDots.on('scroll', () => {
   const scrollTopDots = scrollContainerDots.property('scrollTop');
   let curIndex = Math.floor(scrollTopDots / ITEM_HEIGHT_DOTS);
    displayCommitFiles(curIndex);
-   console.log(scrollTopDots);
 });
