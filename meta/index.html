@@ -9,13 +9,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meta</title>
 </head>
-<body>
+<body class="meta">
     <h1>Meta</h1>
     <h2>Summary</h2>
     <div id="stats"></div>
 
     <h2>Commits By Time of Day</h2>
-    <div id="chart"></div>
+    <div id="scrollytelling">
+      <div id="scroll-container">
+          <div id="spacer"></div>
+          <div id="items-container"></div>
+      </div>
+      <!-- our old scatterplot div -->
+      <div id="chart"></div>
+  </div>
     
     <dl id="commit-tooltip" class="info tooltip">
         <dt>Commit</dt>
@@ -30,5 +37,17 @@
       </dl>
       <p id="selection-count">No commits selected</p>
       <dl id="language-breakdown" class="stats"></dl>
+
+      <h2>File Unit Visualization</h2>
+      <div id="scrollytelling-dots">
+        <div id="scroll-container-dots">
+            <div id="spacer-dots"></div>
+            <div id="dots-container"></div>
+        </div>
+        <div id="dotsthing">
+          <dl class="files">
+          </dl>
+        </div>
+    </div>
 </body>
 </html>
